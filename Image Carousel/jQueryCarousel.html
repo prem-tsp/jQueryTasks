@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JQSlider</title>
+   <!-- <link rel="stylesheet" href="Carousel.css" type = "text/stylesheet">-->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="ImgCarousel.js"></script>
+    <style>
+body{
+    
+	font-family:"Arial",sans-serif;
+	font-size:14px;
+	color:#fff;
+	background:#333;
+}
+
+a{
+	color:#fff;
+	text-decoration: none;
+}
+
+h1{
+	text-align: center;
+}
+
+.container{
+	width:540px;
+	margin:40px auto;
+	overflow:auto;
+}
+
+.inner{
+	width:500px;
+	height:300px;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	padding:3px;
+	border:#666 solid 1px;
+}
+
+.inner img{
+	display:none;
+	width:500px;
+	height:300px;
+}
+
+.inner img.active{
+	display:inline-block;
+}
+
+.prev,.next{
+	float:left;
+	margin-top:130px;
+	cursor: pointer;
+}
+
+.prev{
+	position:relative;
+	margin-right:-45px;
+	z-index:100;
+}
+
+.next{
+	position:relative;
+	margin-left:-45px;
+	z-index:100;
+}
+
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Carousel</h1>
+      <div class="outer">
+        <img src="images_jq/arrow-left.png" class="prev" alt="Prev">
+        <div class="inner">
+          <img src="images_jq/1.png" class="active">
+          <img src="images_jq/2.jpg">
+          <img src="images_jq/3.jpg">
+          <img src="images_jq/4.jpg">
+        </div>
+        <img src="images_jq/arrow-right.png" class="next" alt="Next">
+      </div>
+    </div>
+  </body>
+</html>
