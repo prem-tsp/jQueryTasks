@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src = "https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#but1").on("click",function(){
+            draw();
+        })
+        $("#but2").on("click",function(){
+            reset();
+        })
+
+    })
+    function draw() {
+        var canvas = document.getElementById('myCanvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            var sWidth = canvas.width;
+            var sHeight = canvas.height;
+            var path=new Path2D();
+            path.moveTo((sWidth/2)+50,sHeight/2);
+            path.lineTo((sWidth/2),(sHeight/2)-50);
+            path.lineTo((sWidth/2)-50,sHeight/2);
+            ctx.fill(path);
+        }
+    }
+    function reset()
+    {
+        var canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+        context.clearRect(0,0,canvas.width,canvas.height);
+        
+    }
+
+</script>
+<script>
+    
+</script>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+<!--<div class="triangle-up"></div>-->
+
+<button id = "but1">Click to generate Triangle</button>
+<button id = "but2">Reset</button>
+</body>
+</html> 
